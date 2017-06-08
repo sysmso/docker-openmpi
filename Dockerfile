@@ -1,4 +1,5 @@
 FROM ubuntu:yakkety
+MAINTAINER Martin Souchal "souchal@apc.in2p3.fr"
 
 RUN apt-get update && \
     apt-get install -y python wget software-properties-common build-essential python-dev sgml-base rsync xml-core openssh-client && \

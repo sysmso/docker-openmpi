@@ -1,8 +1,8 @@
-FROM ubuntu:yakkety
+FROM ubuntu:latest
 MAINTAINER Martin Souchal "souchal@apc.in2p3.fr"
 
 RUN apt-get update && \
-    apt-get install -y python wget software-properties-common build-essential python-dev sgml-base rsync xml-core openssh-client && \
+    apt-get install -y wget software-properties-common build-essential sgml-base rsync xml-core openssh-client && \
     apt-get clean
 
 RUN add-apt-repository universe && \
@@ -10,4 +10,9 @@ RUN add-apt-repository universe && \
     apt-get -y install cmake git gfortran openmpi-common openmpi-bin libopenmpi-dev && \
     apt-get clean
 
-ADD ./mpi-ping.c /work/mpi-ping.c
+RUN mkdir /data
+
+ENTRYPOINT ["echo"]
+CMD ["Le runscript est la commande par défaut du conteneur !"]
+
+ADD ./mpi-ping.c /data/mpi-ping.c

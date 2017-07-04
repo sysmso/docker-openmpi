@@ -12,6 +12,6 @@ RUN add-apt-repository universe && \
 
 RUN mkdir /data
 
-ENTRYPOINT echo Le runscript est la commande par défaut du conteneur !
+ENTRYPOINT echo "Le runscript est la commande par défaut du conteneur !"
 
 ADD ./mpi-ping.c /data/mpi-ping.c

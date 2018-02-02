@@ -18,7 +18,6 @@ apt-get update && apt-get -y install software-properties-common wget build-essen
 add-apt-repository universe
 apt-get update && apt-get -y install cmake git gfortran openmpi-common openmpi-bin libopenmpi-dev
 apt-get clean
-mkdir /data
 
 %runscript
 mpicc /mpi-ping.c 

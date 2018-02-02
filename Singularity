@@ -21,4 +21,4 @@ apt-get clean
 mkdir /data
 
 %runscript
-python /pymultinest_demo_minimal.py
+mpicc /mpi-ping.c 

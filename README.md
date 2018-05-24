@@ -7,13 +7,14 @@ cd /data
 mpicc mpi-ping.c
 ```
 Good to make a singularity or charlie-cloud container ;)
+### Singularity
 ```
 singularity create test_dock.img
 singularity import test_dock.img docker://sysmso/openmpi
 singularity exec test_dock.img mpicc /data/mpi-ping.c -o ./mpi-ping
 mpirun singularity exec test_dock.img ./mpi-ping
 ```
-Charlie-cloud
+### Charlie-cloud
 ```
 ch-docker2tar sysmso/docker-openmpi DIRECTORY
 ch-tar2dir sysmso.docker-openmpi.tar.gz DIRECTORY
